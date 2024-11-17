@@ -11,7 +11,7 @@ import {
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { getFlights } from "@/lib/features/flightSlice";
 import { Flight } from "@/_utils/types";
-import UpdateFlightStatus from "@/components/UpdateFlightStatus";
+import UpdateFlightStatusModal from "@/components/UpdateFlightStatusModal";
 import { removeAccessToken, removeRole } from "@/_utils/helpers/auth";
 import { useRouter } from "next/navigation";
 
@@ -432,7 +432,7 @@ const FlightTable = () => {
 
       {/* Modal */}
       {selectedFlight && (
-        <UpdateFlightStatus
+        <UpdateFlightStatusModal
           isOpen={isModalOpen}
           onClose={closeModal}
           flight={selectedFlight}

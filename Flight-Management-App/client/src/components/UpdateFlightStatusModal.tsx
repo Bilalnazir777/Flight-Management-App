@@ -4,7 +4,7 @@ import { Flight } from "@/_utils/types";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { resetError, updateFlight } from "@/lib/features/flightSlice";
 
-interface UpdateFlightStatusProps {
+interface UpdateFlightStatusModalProps {
   isOpen: boolean;
   flight: Flight;
   onClose: () => void;
@@ -18,7 +18,7 @@ const statusOptions = [
   "Scheduled/En Route",
 ];
 
-const UpdateFlightStatus: React.FC<UpdateFlightStatusProps> = ({
+const UpdateFlightStatusModal: React.FC<UpdateFlightStatusModalProps> = ({
   flight,
   isOpen,
   onClose,
@@ -109,4 +109,4 @@ const UpdateFlightStatus: React.FC<UpdateFlightStatusProps> = ({
   );
 };
 
-export default UpdateFlightStatus;
+export default UpdateFlightStatusModal;
