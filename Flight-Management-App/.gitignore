@@ -1,0 +1,5 @@
+/devops/local-volumes
+/devops/.env
+
+/server/node_modules
+/server/.env
